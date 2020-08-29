@@ -1,0 +1,48 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="O começo da loucura!">
+	<meta name="author" content="Bruno Ribeiro Graciano">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>O Grande Início</title>
+	<link rel="stylesheet" type="text/css" href="../stylesheet/index.css">
+</head>
+
+<body>
+	<h3> Página Inicial </h3>
+
+	<p>Seja bem-vindo, usuário!</p>
+	<h5><a href="/pages/">Veja nossas páginas.</a></h5>
+
+	<figure>
+	  <img src="https://media.tenor.com/images/34834cc5500394398244630679f23277/tenor.gif" alt="Minha Figura">
+	  <figcaption>Não vá embora sem dar tchau, ein?!</figcaption>
+	</figure>
+	<audio controls>
+		<source src="sem_titulo.mp3" type="audio/mpeg">
+	</audio>
+	<p>Music made by Rafael Schrott</p>
+	<p><a href="/pages/credits">Créditos</a></p>
+	<button id="tchau" type="button">Tchau!</button>
+	<script>
+		const digaTchau = document.querySelector('button#tchau')
+		var jaRespondido = false
+
+		digaTchau.addEventListener('click', () => {
+			let adeus = confirm('Isso é um adeus?')
+			if (adeus) {
+				document.body.innerHTML = '<a href="https://duckduckgo.com">ADEUS!</a>'
+			} else {
+					if (!jaRespondido) {
+					document.body.innerHTML += '<p id="newp">Por que disse adeus se não iria sair? </p>'
+					const resposta = document.querySelector('p#newp')
+					const resetButton = digaTchau
+
+					digaTchau.remove()
+					document.body.insertBefore(resposta, resetButton)
+					jaRespondido = true
+				}
+			}
+		})
+
+	</script>
+</body>
