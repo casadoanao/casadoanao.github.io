@@ -1,15 +1,51 @@
-body {
+body
+{
 	background: black;
 	color: white;
 }
-figure {
+figure
+{
 	margin-left: 0px;
 }
 
-img {
+img
+{
 	margin-bottom: 10px;
 }
 
-a {
+a
+{
 	color: #C8A2C8;
+}
+
+.redirecionamento
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 2000px;
+	background-color: #463a57;
+	overflow: hidden;
+}
+
+.redirecionamento a
+{
+	float: left;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.redirecionamento a:hover
+{
+	background-color: #ddd;
+	color: black;
+}
+
+.redirecionamento a.ativo
+{
+	background-color: #683da1;
+	color: white;
 }
