@@ -15,6 +15,6 @@ function removeElementClass(el, classToAdd) {
 
 
 for (const actualElement in elements) {
-	actualElement.addEventListener('mouseenter', addElementClass(actualElement, 'active'))
-	actualElement.addEventListener('mouseout', removeElementClass(actualElement, 'active'))
+	actualElement.onmouseenter = addElementClass(actualElement, 'active')
+	actualElement.onmouseout = removeElementClass(actualElement, 'active')
 }
