@@ -6,10 +6,10 @@
 	<title>O Grande Início</title>
 	<link rel="stylesheet" type="text/css" href="../stylesheet/index.css">
 	<div class="redirecionamento";>
-		<a class="ativo" href="#paginainicial">Página Inicial</a>
-		<a href="#conteudo">Conteúdo</a>
-		<a href="#dedicatoria">Dedicatória</a>
-		<a href="#sobre">Sobre</a>
+		<a class="upperLink" href="#paginainicial">Página Inicial</a>
+		<a class="upperLink" href="#conteudo">Conteúdo</a>
+		<a class="upperLink" href="#dedicatoria">Dedicatória</a>
+		<a class="upperLink" href="#sobre">Sobre</a>
 	</div>
 </head>
 
@@ -29,26 +29,8 @@
 	<p>Music made by Rafael Schrott</p>
 	<p><a href="/pages/credits">Créditos</a></p>
 	<button id="tchau" type="button">Tchau!</button>
-	<script>
-		const digaTchau = document.querySelector('button#tchau')
-		var jaRespondido = false
-
-		digaTchau.addEventListener('click', () => {
-			let adeus = confirm('Isso é um adeus?')
-			if (adeus) {
-				document.body.innerHTML = '<a href="https://duckduckgo.com">ADEUS!</a>'
-			} else {
-					if (!jaRespondido) {
-					document.body.innerHTML += '<p id="newp">Por que disse adeus se não iria sair? </p>'
-					const resposta = document.querySelector('p#newp')
-					const resetButton = digaTchau
-
-					digaTchau.remove()
-					document.body.insertBefore(resposta, resetButton)
-					jaRespondido = true
-				}
-			}
-		})
-
-	</script>
+	<div id="msgTchau"></div>
+	
+	<script src="/js/menu.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/tchau.js" type="text/javascript" charset="utf-8"></script>
 </body>
