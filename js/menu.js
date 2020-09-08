@@ -1,5 +1,5 @@
 const upperLinks = document.querySelectorAll('a.upperLink')
-const actualPage = window.location.pathname
+const actualPage = window.location.href
 
 function addElementClass(el, classToAdd) {
 	return function () {
@@ -19,8 +19,8 @@ for (const link in upperLinks) {
 	referredKey.onmouseout = removeElementClass(referredKey, 'active')
 
 	if (referredKey.href !== undefined) {
-		if (referredKey.href.search(actualPage) !== -1) {
-			referredKey.innerText = "aaaaaa"
+		if (referredKey.href === actualPage) {
+			referredKey.title = "Você está aqui"
 		}
 	}
 }
