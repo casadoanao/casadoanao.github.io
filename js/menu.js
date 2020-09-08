@@ -18,7 +18,9 @@ for (const link in upperLinks) {
 	referredKey.onmouseenter = addElementClass(referredKey, 'active')
 	referredKey.onmouseout = removeElementClass(referredKey, 'active')
 
-	if (referredKey.href === actualPage) {
-		referredKey.innerText = "Você está aqui!"
+	if (referredKey.href !== undefined) {
+		if (referredKey.href.search(actualPage) !== -1) {
+			referredKey.innerText = "aaaaaa"
+		}
 	}
 }
