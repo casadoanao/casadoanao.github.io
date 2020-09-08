@@ -1,0 +1,17 @@
+/* Stylesheet totally dedicated to pages.html */
+
+#img_intro {
+	width: 231px;
+	height: 150px;
+	margin-bottom: 90px;
+}
+
+img {
+	margin-left: 0px;
+	height: 150px;
+}
+
+li {
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
