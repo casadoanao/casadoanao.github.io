@@ -1,5 +1,4 @@
-const upperLinks = document.getElementsByClassName('upperLink')
-const elements = Object.keys(upperLinks)
+const upperLinks = document.querySelectorAll('a.upperLink')
 
 function addElementClass(el, classToAdd) {
 	return function () {
@@ -7,14 +6,14 @@ function addElementClass(el, classToAdd) {
 	}
 }
 
-function removeElementClass(el, classToAdd) {
+function removeElementClass(el, classToRemove) {
 	return function () {
-		el.classList.remove(classToAdd)
+		el.classList.remove(classToRemove)
 	}
 }
 
-
-for (const actualElement in elements) {
-	actualElement.onmouseenter = addElementClass(actualElement, 'active')
-	actualElement.onmouseout = removeElementClass(actualElement, 'active')
+for (const link in upperLinks) {
+	const referredKey = upperLinks[link]
+	referredKey.onmouseenter = addElementClass(referredKey, 'active')
+	referredKey.onmouseout = removeElementClass(referredKey, 'active')
 }
